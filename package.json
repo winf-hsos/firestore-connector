@@ -10,6 +10,10 @@
     "iot",
     "firestore"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winf-hsos/firestore-connector.git"
+  },
   "author": "Nicolas Meseth",
   "license": "ISC",
   "dependencies": {
