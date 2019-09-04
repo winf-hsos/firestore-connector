@@ -14,11 +14,11 @@ exports.init = function (pathToServiceAccountKey, databaseURL) {
     admin.firestore().settings(settings);
 }
 
-exports.writeAvgForMinute = function (sensorName, start, end, avgValue, count) {
+exports.writeAvgForMinute = function (sensorName, start, end, avg, max, min, count) {
 
     var dateComponents = _getDateComponentsFromTs(end);
 
-    var data = { startTime: start, endTime: end, avgValue: avgValue, count: count };
+    var data = { startTime: start, endTime: end, avg: avg, max: max, min: min, count: count };
 
     var path = 'sensors/' + sensorName + "/"
         + dateComponents.year.toString() + "-" + _getWithZero(dateComponents.month) + "-" + _getWithZero(dateComponents.day);
